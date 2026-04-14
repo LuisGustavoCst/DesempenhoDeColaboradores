@@ -1,41 +1,35 @@
-// Avaliação
+// Avaliação 
 
 const readline = require('readline-sync')
 
-
 const META_MENSAL = 10000
 
-const nome = readline.question('Qual é o nome do funcionário? ')
-const cargo = readline.question('Qual é o cargo dele(a)? ')
-const salarioBase = readline.questionFloat('Qual o salário base (em R$): ')
-const resultadoPeriodo = readline.questionFloat('Quanto foi o resultado alcançado no período (em R$)? ')
+const nome = readline.question('Nome do funcionário: ')
+const cargo = readline.question('Cargo: ')
+const salarioBase = readline.questionFloat('Salário base: R$ ')
+const resultadoPeriodo = readline.questionFloat('Resultado alcançado no período (R$): ')
 const desempenhoPercentual = (resultadoPeriodo / META_MENSAL) * 100
 let classificacao = ''
 let bonusPercentual = 0
-let mensagem = ''
 
 if (desempenhoPercentual >= 100) {
     classificacao = 'Excelente'
     bonusPercentual = 20
-    mensagem = 'Boa! Você superou a meta!'
 } else if (desempenhoPercentual >= 80) {
     classificacao = 'Bom'
     bonusPercentual = 10
-    mensagem = 'Muito bom trabalho!'
 } else if (desempenhoPercentual >= 50) {
     classificacao = 'Regular'
     bonusPercentual = 5
-    mensagem = 'Bom esforço! mas tem muito oque melhorar.'
 } else {
     classificacao = 'Insuficiente'
     bonusPercentual = 0
-    mensagem = 'Não desanime, na proxima voce se saira melhor!'
 }
 
 const bonus = (bonusPercentual / 100) * salarioBase
 const salario = salarioBase + bonus
 
-console.log('\n========== Resultado da Avaliação ==========')  
+console.log(`========== Avaliação de Desempenho ==========`)
 console.log(`Funcionário: ${nome}`)
 console.log(`Cargo: ${cargo}`)
 console.log(`Salário Base: R$ ${salarioBase}`)
@@ -43,6 +37,6 @@ console.log(`Resultado Alcançado: R$ ${resultadoPeriodo}`)
 console.log(`Desempenho: ${desempenhoPercentual}% - ${classificacao}`)
 console.log(`Bônus: R$ ${bonus} (${bonusPercentual}%)`)
 console.log(`Salário Final: R$ ${salario}`)
-console.log(`\n${mensagem}`)
-console.log('============================================')
-console.log('Obrigado por usar o sistema! Até a próxima avaliação.')
+console.log(`============================================`)
+
+
