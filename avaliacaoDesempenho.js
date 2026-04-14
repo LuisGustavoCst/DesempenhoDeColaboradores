@@ -39,4 +39,3 @@ console.log(`Bônus: R$ ${bonus} (${bonusPercentual}%)`)
 console.log(`Salário Final: R$ ${salario}`)
 console.log(`============================================`)
 
-
