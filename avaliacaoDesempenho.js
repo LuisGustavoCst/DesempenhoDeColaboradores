@@ -9,6 +9,7 @@ const cargo = readline.question('Qual o cargo do funcionário: ')
 const salarioBase = readline.questionFloat('Salário base do funcionário: R$ ')
 const resultadoPeriodo = readline.questionFloat('Resultado alcançado no período (R$): ')
 const desempenhoPercentual = (resultadoPeriodo / META_MENSAL) * 100
+
 let classificacao = ''
 let bonusPercentual = 0
 let mensagem = ''
@@ -39,7 +40,7 @@ console.log(`Funcionário: ${nome}`)
 console.log(`Cargo: ${cargo}`)
 console.log(`Salário Base: R$ ${salarioBase}`)
 console.log(`Resultado Alcançado: R$ ${resultadoPeriodo}`)
-console.log(`Desempenho: ${desempenhoPercentual}% - ${classificacao}`)
+console.log(`Desempenho: ${Math.round(desempenhoPercentual)}% - ${classificacao}`)
 console.log(`Bônus: R$ ${bonus} (${bonusPercentual}%)`)
 console.log(`Salário Final: R$ ${salario}`)
 console.log(`Mensagem: ${mensagem}`)
