@@ -22,7 +22,7 @@ if (desempenhoPercentual >= 100) {
     classificacao = 'Regular'
     bonusPercentual = 5
 } else {
-    classificacao = 'Abaixo do Esperado'
+    classificacao = 'Ruim'
     bonusPercentual = 0
 }
 
