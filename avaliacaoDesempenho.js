@@ -4,9 +4,9 @@ const readline = require('readline-sync')
 
 const META_MENSAL = 10000
 
-const nome = readline.question('Nome do funcionário: ')
-const cargo = readline.question('Cargo: ')
-const salarioBase = readline.questionFloat('Salário base: R$ ')
+const nome = readline.question('Qual o nome do funcionário: ')
+const cargo = readline.question('Qual o cargo do funcionário: ')
+const salarioBase = readline.questionFloat('Salário base do funcionário: R$ ')
 const resultadoPeriodo = readline.questionFloat('Resultado alcançado no período (R$): ')
 const desempenhoPercentual = (resultadoPeriodo / META_MENSAL) * 100
 let classificacao = ''
@@ -22,7 +22,7 @@ if (desempenhoPercentual >= 100) {
     classificacao = 'Regular'
     bonusPercentual = 5
 } else {
-    classificacao = 'Insuficiente'
+    classificacao = 'Abaixo do Esperado'
     bonusPercentual = 0
 }
 
